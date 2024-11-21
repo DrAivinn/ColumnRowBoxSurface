@@ -3,7 +3,9 @@ package com.example.columnrowboxsurface
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -69,6 +71,8 @@ class MainActivity : ComponentActivity() {
             Row(
                 Modifier
                     .fillMaxWidth()
+                    .padding(horizontal = 8.dp)
+                    .border(border = BorderStroke(1.dp, Color.Black))
                     .padding(horizontal = 8.dp), Arrangement.SpaceBetween
             ) {
                 Text(person.name, fontSize = 24.sp, fontWeight = FontWeight.Bold)
